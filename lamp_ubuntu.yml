@@ -1,5 +1,5 @@
 ---
-- hosts: appserver
+- hosts: localhost
   become: yes
   tasks:
   - name: fail for other platforms
@@ -34,9 +34,7 @@
      msg: "starting php"
   - name: copy php page
     copy:
-     content: "<?php
-phpinfo();
-?>"
+     content: "<?php  phpinfo();  ?>"
      dest: /var/www/html/info.php
     notify:
       - restart apache2
