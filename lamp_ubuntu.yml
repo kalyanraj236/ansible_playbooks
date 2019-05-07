@@ -15,7 +15,7 @@
   - debug:
      msg: "starting apache2"
     notify:
-      - restart_apahe2
+      - restart_apache2
   - name: installing mysql
     apt:
      name: mysql-server
