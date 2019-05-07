@@ -40,6 +40,6 @@
       - restart_apache2
   handlers:
   - name: restart_apache2
-    systemd:
+    service:
      state: restarted
      name: apache2
