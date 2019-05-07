@@ -15,7 +15,7 @@
   - debug:
      msg: "starting apache2"
     notify:
-      - restart apahe2
+      - restart_apahe2
   - name: installing mysql
     apt:
      name: mysql-server
@@ -33,9 +33,9 @@
      content: "<?php  phpinfo();  ?>"
      dest: /var/www/html/info.php
     notify:
-      - restart apache2
+      - restart_apache2
   handlers:
-  - name: restart apache2
+  - name: restart_apache2
     systemd:
      state: restarted
      name: apache2
