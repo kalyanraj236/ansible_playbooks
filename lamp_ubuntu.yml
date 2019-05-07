@@ -24,7 +24,7 @@
      msg: "starting mysql"
   - name: installing php modules
     apt:
-     name: "[ php, php-mysql, libapache2-mod ]"
+     name: "[ php, php-mysql, libapache2-mod-php ]"
      state: present
   - debug:
      msg: "starting php"
