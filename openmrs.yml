@@ -1,5 +1,5 @@
 ---
-- hosts: openrms
+- hosts: localhost
   become: yes
   tasks:
   - name: install firefox,java8,tomcat8,unzip
