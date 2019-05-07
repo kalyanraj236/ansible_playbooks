@@ -23,9 +23,13 @@
   - debug:
      msg: "starting mysql"
   - name: installing php modules
-    apt:
-     name: "[ php, php-mysql, libapache2-mod-php ]"
-     state: present
+    package:
+      name: "{{ item }}"
+      state: present
+    with_items:
+      - php
+      - php-mysql
+      - libapache2-mod-php
   - debug:
      msg: "starting php"
   - name: copy php page
