@@ -24,12 +24,8 @@
      msg: "starting mysql"
   - name: installing php modules
     apt:
-     name: "{{ item }}"
+     name: "{{ - php, php-mysql, libapache2-mod, php }}"
      state: present
-    loop:
-    - php
-    - php-mysql
-    - libapache2-mod-php
   - debug:
      msg: "starting php"
   - name: copy php page
